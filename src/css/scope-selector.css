@@ -1,0 +1,63 @@
+.scope {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  display: inline-flex;
+  color: white;
+  margin: 0;
+  padding: 1px;
+  cursor: pointer;
+}
+.scope > span {
+  align-items: center;
+  display: inline-flex;
+}
+.scope > span > span {
+  pointer-events: none;
+  white-space: nowrap;
+}
+#specificScope {
+  direction: ltr;
+  justify-content: flex-end;
+  width: 16em;
+}
+#specificScope.on {
+  background-color: #24c;
+  border-color: #24c;
+}
+#specificScope > span {
+  background-color: #ccc;
+  justify-content: flex-end;
+}
+#specificScope > span.on {
+  background-color: #24c;
+}
+#specificScope > span:first-of-type:not(.on):hover,
+#specificScope > span:first-of-type:not(.on):hover ~ span:not(.on),
+#specificScope > span:not(.on) + span:not(.on):hover,
+#specificScope > span:not(.on) + span:not(.on):hover ~ span:not(.on) {
+  background-color: #999;
+}
+#specificScope > span:first-of-type:not(.on):hover ~ span,
+#specificScope > span:not(.on) + span:not(.on):hover ~ span,
+#specificScope > span.on + span:hover,
+#specificScope > span.on + span:hover ~ span {
+  background-color: #139;
+}
+#specificScope > span:first-of-type {
+  flex: 1;
+}
+#globalScope {
+  justify-content: center;
+  margin-left: 1px;
+  width: 1.6em;
+}
+#globalScope.on {
+  background-color: #000;
+  border-color: #000;
+}
+#globalScope:not(.on):hover {
+  background-color: #999;
+  border-color: #999;
+}

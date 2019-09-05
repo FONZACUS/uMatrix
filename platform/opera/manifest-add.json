@@ -1,0 +1,9 @@
+{
+    "sidebar_action": {
+        "default_title": "__MSG_loggerPageName__",
+        "default_panel": "logger-ui.html",
+        "default_icon": {
+            "16": "img/icon_16.png"
+        }
+    }
+}
